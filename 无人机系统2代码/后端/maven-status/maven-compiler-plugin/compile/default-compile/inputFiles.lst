@@ -1,0 +1,16 @@
+C:\Users\m1479\Desktop\b\baseplatform\src\main\java\com\md\basePlatform\service\DroneService.java
+C:\Users\m1479\Desktop\b\baseplatform\src\main\java\com\md\basePlatform\config\CorsConfig.java
+C:\Users\m1479\Desktop\b\baseplatform\src\main\java\com\md\basePlatform\controller\DroneController.java
+C:\Users\m1479\Desktop\b\baseplatform\src\main\java\com\md\basePlatform\mapper\DroneMapper.java
+C:\Users\m1479\Desktop\b\baseplatform\src\main\java\com\md\basePlatform\service\impl\DroneServiceImpl.java
+C:\Users\m1479\Desktop\b\baseplatform\src\main\java\com\md\basePlatform\config\WebMvcConfig.java
+C:\Users\m1479\Desktop\b\baseplatform\src\main\java\com\md\basePlatform\dto\DroneQuery.java
+C:\Users\m1479\Desktop\b\baseplatform\src\main\java\com\md\basePlatform\interceptor\RequestLogInterceptor.java
+C:\Users\m1479\Desktop\b\baseplatform\src\main\java\com\md\basePlatform\common\Result.java
+C:\Users\m1479\Desktop\b\baseplatform\src\main\java\com\md\basePlatform\dto\DroneDTO.java
+C:\Users\m1479\Desktop\b\baseplatform\src\main\java\com\md\basePlatform\config\MyBatisConfig.java
+C:\Users\m1479\Desktop\b\baseplatform\src\main\java\com\md\basePlatform\exception\GlobalExceptionHandler.java
+C:\Users\m1479\Desktop\b\baseplatform\src\main\java\com\md\basePlatform\BasePlatformApplication.java
+C:\Users\m1479\Desktop\b\baseplatform\src\main\java\com\md\basePlatform\config\SwaggerConfig.java
+C:\Users\m1479\Desktop\b\baseplatform\src\main\java\com\md\basePlatform\domain\Drone.java
+C:\Users\m1479\Desktop\b\baseplatform\src\main\java\com\md\basePlatform\exception\BusinessException.java

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--
+  无人机数据访问层Mapper XML
+  负责无人机数据库操作SQL映射
+  表名：drone
+-->
+<mapper namespace="com.md.basePlatform.mapper.DroneMapper">
+    
+    <!-- 基础结果映射：数据库列名到Java属性的映射 -->
+    <resultMap id="BaseResultMap" type="com.md.basePlatform.domain.Drone">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="model" property="model"/>
+        <result column="manufacturer" property="manufacturer"/>
+        <result column="weight" property="weight"/>
+        <result column="max_altitude" property="maxAltitude"/>
+        <result column="max_speed" property="maxSpeed"/>
+        <result column="battery_capacity" property="batteryCapacity"/>
+        <result column="flight_time" property="flightTime"/>
+        <result column="camera_resolution" property="cameraResolution"/>
+        <result column="status" property="status"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+    </resultMap>
+    
+    <!-- 基础列名列表，供其他SQL引用 -->
+    <sql id="BaseColumnList">
+        id, name, model, manufacturer, weight, max_altitude, max_speed, 
+        battery_capacity, flight_time, camera_resolution, status, create_time, update_time
+    </sql>
+    
+    <!--
+      查询无人机列表（支持条件查询和分页）
+      参数：DroneQuery对象，包含name、model、manufacturer、status
+      返回：按创建时间倒序的无人机列表
+    -->
+    <select id="selectList" resultMap="BaseResultMap">
+        SELECT <include refid="BaseColumnList"/>
+        FROM drone
+        <where>
+            <if test="(name != null and name != '') or (model != null and model != '') or (manufacturer != null and manufacturer != '')">
+                AND (name LIKE '%${name}%' OR model LIKE '%${model}%' OR manufacturer LIKE '%${manufacturer}%')
+            </if>
+            <if test="status != null">
+                AND status = #{status}
+            </if>
+        </where>
+        ORDER BY create_time DESC
+    </select>
+    
+    <!-- 根据ID查询无人机详情 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        SELECT <include refid="BaseColumnList"/>
+        FROM drone
+        WHERE id = #{id}
+    </select>
+    
+    <!--
+      插入无人机记录
+      支持自增主键回填到id属性
+    -->
+    <insert id="insert" parameterType="com.md.basePlatform.domain.Drone" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO drone (name, model, manufacturer, weight, max_altitude, max_speed, 
+            battery_capacity, flight_time, camera_resolution, status, create_time, update_time)
+        VALUES (#{name}, #{model}, #{manufacturer}, #{weight}, #{maxAltitude}, #{maxSpeed}, 
+            #{batteryCapacity}, #{flightTime}, #{cameraResolution}, #{status}, 
+            #{createTime}, #{updateTime})
+    </insert>
+    
+    <!--
+      根据ID更新无人机信息
+      使用动态SQL，仅更新非空字段
+    -->
+    <update id="updateById" parameterType="com.md.basePlatform.domain.Drone">
+        UPDATE drone
+        SET 
+            <if test="name != null">name = #{name},</if>
+            <if test="model != null">model = #{model},</if>
+            <if test="manufacturer != null">manufacturer = #{manufacturer},</if>
+            <if test="weight != null">weight = #{weight},</if>
+            <if test="maxAltitude != null">max_altitude = #{maxAltitude},</if>
+            <if test="maxSpeed != null">max_speed = #{maxSpeed},</if>
+            <if test="batteryCapacity != null">battery_capacity = #{batteryCapacity},</if>
+            <if test="flightTime != null">flight_time = #{flightTime},</if>
+            <if test="cameraResolution != null">camera_resolution = #{cameraResolution},</if>
+            <if test="status != null">status = #{status},</if>
+            update_time = #{updateTime}
+        WHERE id = #{id}
+    </update>
+    
+    <!-- 根据ID删除无人机 -->
+    <delete id="deleteById">
+        DELETE FROM drone WHERE id = #{id}
+    </delete>
+    
+    <!--
+      统计无人机数量（支持条件查询）
+      用于分页查询总数
+    -->
+    <select id="count" resultType="java.lang.Long">
+        SELECT COUNT(*) FROM drone
+        <where>
+            <if test="name != null and name != ''">
+                AND name LIKE '%${name}%'
+            </if>
+            <if test="model != null and model != ''">
+                AND model LIKE '%${model}%'
+            </if>
+            <if test="manufacturer != null and manufacturer != ''">
+                AND manufacturer LIKE '%${manufacturer}%'
+            </if>
+            <if test="status != null">
+                AND status = #{status}
+            </if>
+        </where>
+    </select>
+</mapper>

@@ -1,0 +1,181 @@
+2026-06-01T22:42:47.456+08:00  INFO 12372 --- [basePlatform] [main] c.m.b.BasePlatformApplication            : Starting BasePlatformApplication using Java 21.0.11 with PID 12372 (C:\Users\m1479\Desktop\b\baseplatform\target\classes started by m1479 in c:\Users\m1479\Desktop\b\baseplatform)
+2026-06-01T22:42:47.456+08:00 DEBUG 12372 --- [basePlatform] [main] c.m.b.BasePlatformApplication            : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-06-01T22:42:47.458+08:00  INFO 12372 --- [basePlatform] [main] c.m.b.BasePlatformApplication            : The following 1 profile is active: "sqlite"
+2026-06-01T22:42:48.689+08:00  WARN 12372 --- [basePlatform] [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor []? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-06-01T22:42:48.738+08:00  WARN 12372 --- [basePlatform] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor []? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-06-01T22:42:48.738+08:00  WARN 12372 --- [basePlatform] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Generic' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Generic] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor []? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-06-01T22:42:48.760+08:00  WARN 12372 --- [basePlatform] [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor []? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-06-01T22:42:48.766+08:00  WARN 12372 --- [basePlatform] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$PooledDataSourceConfiguration' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$PooledDataSourceConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor []? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-06-01T22:42:48.767+08:00  WARN 12372 --- [basePlatform] [main] trationDelegate$BeanPostProcessorChecker : Bean 'jdbcConnectionDetails' of type [org.springframework.boot.autoconfigure.jdbc.PropertiesJdbcConnectionDetails] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor []? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-06-01T22:42:48.810+08:00  WARN 12372 --- [basePlatform] [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor []? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-06-01T22:42:49.019+08:00  WARN 12372 --- [basePlatform] [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor []? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-06-01T22:42:49.019+08:00  WARN 12372 --- [basePlatform] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.sql.init.DataSourceInitializationConfiguration' of type [org.springframework.boot.autoconfigure.sql.init.DataSourceInitializationConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor []? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-06-01T22:42:49.024+08:00  WARN 12372 --- [basePlatform] [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.sql.init-org.springframework.boot.autoconfigure.sql.init.SqlInitializationProperties' of type [org.springframework.boot.autoconfigure.sql.init.SqlInitializationProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor []? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-06-01T22:42:49.168+08:00 ERROR 12372 --- [basePlatform] [main] com.alibaba.druid.pool.DruidDataSource   : testWhileIdle is true, validationQuery not set
+2026-06-01T22:42:49.179+08:00  INFO 12372 --- [basePlatform] [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2026-06-01T22:42:49.978+08:00  WARN 12372 --- [basePlatform] [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSourceScriptDatabaseInitializer' of type [org.springframework.boot.autoconfigure.sql.init.SqlDataSourceScriptDatabaseInitializer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor []? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-06-01T22:42:49.990+08:00  WARN 12372 --- [basePlatform] [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor []? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-06-01T22:42:49.994+08:00  WARN 12372 --- [basePlatform] [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor []? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-06-01T22:42:49.998+08:00  WARN 12372 --- [basePlatform] [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [jdk.proxy2.$Proxy68] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor []? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-06-01T22:42:50.001+08:00  WARN 12372 --- [basePlatform] [main] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.md.basePlatform.config.shiro.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor []? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-06-01T22:42:50.006+08:00  WARN 12372 --- [basePlatform] [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.md.basePlatform.config.shiro.ShiroConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor []? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-06-01T22:42:50.039+08:00  WARN 12372 --- [basePlatform] [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor []? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-06-01T22:42:50.320+08:00  INFO 12372 --- [basePlatform] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8084 (http)
+2026-06-01T22:42:50.336+08:00  INFO 12372 --- [basePlatform] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-01T22:42:50.336+08:00  INFO 12372 --- [basePlatform] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-06-01T22:42:50.480+08:00  INFO 12372 --- [basePlatform] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-01T22:42:50.480+08:00  INFO 12372 --- [basePlatform] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2880 ms
+2026-06-01T22:42:50.763+08:00  INFO 12372 --- [basePlatform] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-06-01T22:42:51.254+08:00  INFO 12372 --- [basePlatform] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8084 (http) with context path ''
+2026-06-01T22:42:51.264+08:00  INFO 12372 --- [basePlatform] [main] c.m.b.BasePlatformApplication            : Started BasePlatformApplication in 4.437 seconds (process running for 5.114)
+2026-06-01T22:44:41.608+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-01T22:44:41.608+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-01T22:44:41.608+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-06-01T22:44:41.660+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-2] c.m.b.interceptor.RequestLogInterceptor  : 【请求开始】 method=POST, url=/api/auth/login, queryString=null, params=, clientIp=0:0:0:0:0:0:0:1
+2026-06-01T22:44:41.819+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-2] c.m.b.controller.AuthController          : 登录请求: username=admin
+2026-06-01T22:44:41.821+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-2] c.m.b.config.shiro.CustomRealm           : Shiro 认证: username=admin
+2026-06-01T22:44:41.898+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-2] c.m.b.config.shiro.CustomRealm           : Shiro 认证成功: id=1, username=admin
+2026-06-01T22:44:41.915+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-2] c.m.b.service.impl.UserServiceImpl       : 查询用户详情: username=admin
+2026-06-01T22:44:41.962+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-2] c.m.b.interceptor.RequestLogInterceptor  : 【请求结束】 method=POST, url=/api/auth/login, statusCode=200, duration=302ms
+2026-06-01T22:44:58.692+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-3] c.m.b.interceptor.RequestLogInterceptor  : 【请求开始】 method=GET, url=/api/drone/list, queryString=null, params=, clientIp=0:0:0:0:0:0:0:1
+2026-06-01T22:44:58.694+08:00 ERROR 12372 --- [basePlatform] [http-nio-8084-exec-3] c.m.b.exception.GlobalExceptionHandler   : 服务器内部错误
+
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "list"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.convertIfNecessary(AbstractNamedValueMethodArgumentResolver.java:302) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:137) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:178) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.20.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.20.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61) ~[shiro-web-1.13.0-jakarta.jar:1.13.0]
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108) ~[shiro-web-1.13.0-jakarta.jar:1.13.0]
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137) ~[shiro-web-1.13.0-jakarta.jar:1.13.0]
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:154) ~[shiro-web-1.13.0-jakarta.jar:1.13.0]
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66) ~[shiro-web-1.13.0-jakarta.jar:1.13.0]
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108) ~[shiro-web-1.13.0-jakarta.jar:1.13.0]
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137) ~[shiro-web-1.13.0-jakarta.jar:1.13.0]
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:154) ~[shiro-web-1.13.0-jakarta.jar:1.13.0]
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66) ~[shiro-web-1.13.0-jakarta.jar:1.13.0]
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:458) ~[shiro-web-1.13.0-jakarta.jar:1.13.0]
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:373) ~[shiro-web-1.13.0-jakarta.jar:1.13.0]
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90) ~[shiro-core-1.13.0.jar:1.13.0]
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83) ~[shiro-core-1.13.0.jar:1.13.0]
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387) ~[shiro-core-1.13.0.jar:1.13.0]
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:370) ~[shiro-web-1.13.0-jakarta.jar:1.13.0]
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:154) ~[shiro-web-1.13.0-jakarta.jar:1.13.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: java.lang.NumberFormatException: For input string: "list"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[na:na]
+	at java.base/java.lang.Long.parseLong(Long.java:709) ~[na:na]
+	at java.base/java.lang.Long.valueOf(Long.java:1157) ~[na:na]
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:206) ~[spring-core-6.1.6.jar:6.1.6]
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:439) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:412) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:161) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:80) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:860) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.convertIfNecessary(AbstractNamedValueMethodArgumentResolver.java:294) ~[spring-web-6.1.6.jar:6.1.6]
+	... 70 common frames omitted
+
+2026-06-01T22:44:58.701+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-3] c.m.b.interceptor.RequestLogInterceptor  : 【请求结束】 method=GET, url=/api/drone/list, statusCode=500, duration=9ms
+2026-06-01T22:45:19.711+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-4] c.m.b.interceptor.RequestLogInterceptor  : 【请求开始】 method=GET, url=/api/drone, queryString=null, params=, clientIp=0:0:0:0:0:0:0:1
+2026-06-01T22:45:19.722+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-4] c.m.b.controller.DroneController         : 查询无人机列表请求: query=DroneQuery(keyword=null, name=null, model=null, manufacturer=null, status=null), pageNum=1, pageSize=10
+2026-06-01T22:45:19.724+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-4] c.m.b.service.impl.DroneServiceImpl      : 查询无人机列表: query=DroneQuery(keyword=null, name=null, model=null, manufacturer=null, status=null), pageNum=1, pageSize=10
+2026-06-01T22:45:19.776+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-4] c.m.b.interceptor.RequestLogInterceptor  : 【请求结束】 method=GET, url=/api/drone, statusCode=200, duration=65ms
+2026-06-01T22:49:17.601+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-9] c.m.b.interceptor.RequestLogInterceptor  : 【请求开始】 method=POST, url=/api/auth/login, queryString=null, params=, clientIp=0:0:0:0:0:0:0:1
+2026-06-01T22:49:17.606+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-9] c.m.b.controller.AuthController          : 登录请求: username=admin
+2026-06-01T22:49:17.606+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-9] c.m.b.config.shiro.CustomRealm           : Shiro 认证: username=admin
+2026-06-01T22:49:17.622+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-9] c.m.b.config.shiro.CustomRealm           : Shiro 认证成功: id=1, username=admin
+2026-06-01T22:49:17.624+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-9] c.m.b.service.impl.UserServiceImpl       : 查询用户详情: username=admin
+2026-06-01T22:49:17.644+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-9] c.m.b.interceptor.RequestLogInterceptor  : 【请求结束】 method=POST, url=/api/auth/login, statusCode=200, duration=43ms
+2026-06-01T22:49:17.681+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-8] c.m.b.interceptor.RequestLogInterceptor  : 【请求开始】 method=GET, url=/api/drone, queryString=pageNum=1&pageSize=10&keyword=, params=pageNum=1&pageSize=10&keyword=, clientIp=0:0:0:0:0:0:0:1
+2026-06-01T22:49:17.690+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-8] c.m.b.controller.DroneController         : 查询无人机列表请求: query=DroneQuery(keyword=, name=null, model=null, manufacturer=null, status=null), pageNum=1, pageSize=10
+2026-06-01T22:49:17.690+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-8] c.m.b.service.impl.DroneServiceImpl      : 查询无人机列表: query=DroneQuery(keyword=, name=null, model=null, manufacturer=null, status=null), pageNum=1, pageSize=10
+2026-06-01T22:49:17.708+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-8] c.m.b.interceptor.RequestLogInterceptor  : 【请求结束】 method=GET, url=/api/drone, statusCode=200, duration=29ms
+2026-06-01T22:49:45.701+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-10] c.m.b.interceptor.RequestLogInterceptor  : 【请求开始】 method=POST, url=/api/drone, queryString=null, params=, clientIp=0:0:0:0:0:0:0:1
+2026-06-01T22:49:45.833+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-10] c.m.b.controller.DroneController         : 创建无人机请求: dto=DroneDTO(id=null, name=11, model=11, manufacturer=11, weight=11.0, maxAltitude=1, maxSpeed=1, batteryCapacity=1, flightTime=1, cameraResolution=1080P, status=1, createTime=null, updateTime=null)
+2026-06-01T22:49:45.857+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-10] c.m.b.service.impl.DroneServiceImpl      : 创建无人机: dto=DroneDTO(id=null, name=11, model=11, manufacturer=11, weight=11.0, maxAltitude=1, maxSpeed=1, batteryCapacity=1, flightTime=1, cameraResolution=1080P, status=1, createTime=null, updateTime=null)
+2026-06-01T22:49:45.934+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-10] c.m.b.service.impl.DroneServiceImpl      : 无人机创建成功: id=4
+2026-06-01T22:49:46.158+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-10] c.m.b.service.impl.DroneServiceImpl      : 查询无人机详情: id=4
+2026-06-01T22:49:46.188+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-10] c.m.b.interceptor.RequestLogInterceptor  : 【请求结束】 method=POST, url=/api/drone, statusCode=201, duration=487ms
+2026-06-01T22:49:46.212+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-2] c.m.b.interceptor.RequestLogInterceptor  : 【请求开始】 method=GET, url=/api/drone, queryString=pageNum=1&pageSize=3&keyword=, params=pageNum=1&pageSize=3&keyword=, clientIp=0:0:0:0:0:0:0:1
+2026-06-01T22:49:46.218+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-2] c.m.b.controller.DroneController         : 查询无人机列表请求: query=DroneQuery(keyword=, name=null, model=null, manufacturer=null, status=null), pageNum=1, pageSize=3
+2026-06-01T22:49:46.219+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-2] c.m.b.service.impl.DroneServiceImpl      : 查询无人机列表: query=DroneQuery(keyword=, name=null, model=null, manufacturer=null, status=null), pageNum=1, pageSize=3
+2026-06-01T22:49:46.241+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-2] c.m.b.interceptor.RequestLogInterceptor  : 【请求结束】 method=GET, url=/api/drone, statusCode=200, duration=29ms
+2026-06-01T22:49:49.992+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-1] c.m.b.interceptor.RequestLogInterceptor  : 【请求开始】 method=GET, url=/api/drone, queryString=pageNum=1&pageSize=4&keyword=1, params=pageNum=1&pageSize=4&keyword=1, clientIp=0:0:0:0:0:0:0:1
+2026-06-01T22:49:49.998+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-1] c.m.b.controller.DroneController         : 查询无人机列表请求: query=DroneQuery(keyword=1, name=null, model=null, manufacturer=null, status=null), pageNum=1, pageSize=4
+2026-06-01T22:49:50.001+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-1] c.m.b.service.impl.DroneServiceImpl      : 查询无人机列表: query=DroneQuery(keyword=1, name=null, model=null, manufacturer=null, status=null), pageNum=1, pageSize=4
+2026-06-01T22:49:50.033+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-1] c.m.b.interceptor.RequestLogInterceptor  : 【请求结束】 method=GET, url=/api/drone, statusCode=200, duration=41ms
+2026-06-01T22:49:52.448+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-3] c.m.b.interceptor.RequestLogInterceptor  : 【请求开始】 method=GET, url=/api/drone, queryString=pageNum=1&pageSize=2&keyword=, params=pageNum=1&pageSize=2&keyword=, clientIp=0:0:0:0:0:0:0:1
+2026-06-01T22:49:52.450+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-3] c.m.b.controller.DroneController         : 查询无人机列表请求: query=DroneQuery(keyword=, name=null, model=null, manufacturer=null, status=null), pageNum=1, pageSize=2
+2026-06-01T22:49:52.450+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-3] c.m.b.service.impl.DroneServiceImpl      : 查询无人机列表: query=DroneQuery(keyword=, name=null, model=null, manufacturer=null, status=null), pageNum=1, pageSize=2
+2026-06-01T22:49:52.474+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-3] c.m.b.interceptor.RequestLogInterceptor  : 【请求结束】 method=GET, url=/api/drone, statusCode=200, duration=26ms
+2026-06-01T22:49:57.390+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-4] c.m.b.interceptor.RequestLogInterceptor  : 【请求开始】 method=DELETE, url=/api/drone/4, queryString=null, params=, clientIp=0:0:0:0:0:0:0:1
+2026-06-01T22:49:57.393+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-4] c.m.b.controller.DroneController         : 删除无人机请求: id=4
+2026-06-01T22:49:57.396+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-4] c.m.b.service.impl.DroneServiceImpl      : 删除无人机: id=4
+2026-06-01T22:49:57.434+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-4] c.m.b.service.impl.DroneServiceImpl      : 无人机删除成功: id=4
+2026-06-01T22:49:57.575+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-4] c.m.b.interceptor.RequestLogInterceptor  : 【请求结束】 method=DELETE, url=/api/drone/4, statusCode=200, duration=187ms
+2026-06-01T22:49:57.597+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-5] c.m.b.interceptor.RequestLogInterceptor  : 【请求开始】 method=GET, url=/api/drone, queryString=pageNum=1&pageSize=4&keyword=, params=pageNum=1&pageSize=4&keyword=, clientIp=0:0:0:0:0:0:0:1
+2026-06-01T22:49:57.607+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-5] c.m.b.controller.DroneController         : 查询无人机列表请求: query=DroneQuery(keyword=, name=null, model=null, manufacturer=null, status=null), pageNum=1, pageSize=4
+2026-06-01T22:49:57.607+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-5] c.m.b.service.impl.DroneServiceImpl      : 查询无人机列表: query=DroneQuery(keyword=, name=null, model=null, manufacturer=null, status=null), pageNum=1, pageSize=4
+2026-06-01T22:49:57.624+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-5] c.m.b.interceptor.RequestLogInterceptor  : 【请求结束】 method=GET, url=/api/drone, statusCode=200, duration=27ms
+2026-06-01T22:50:05.678+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-6] c.m.b.interceptor.RequestLogInterceptor  : 【请求开始】 method=PUT, url=/api/drone/1, queryString=null, params=, clientIp=0:0:0:0:0:0:0:1
+2026-06-01T22:50:05.692+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-6] c.m.b.controller.DroneController         : 更新无人机请求: id=1, dto=DroneDTO(id=1, name=测试无人机1, model=T001, manufacturer=测试厂商A, weight=1.5, maxAltitude=500, maxSpeed=100, batteryCapacity=4000, flightTime=30, cameraResolution=1080P, status=1, createTime=null, updateTime=null)
+2026-06-01T22:50:05.696+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-6] c.m.b.service.impl.DroneServiceImpl      : 更新无人机: id=1, dto=DroneDTO(id=1, name=测试无人机1, model=T001, manufacturer=测试厂商A, weight=1.5, maxAltitude=500, maxSpeed=100, batteryCapacity=4000, flightTime=30, cameraResolution=1080P, status=1, createTime=null, updateTime=null)
+2026-06-01T22:50:05.738+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-6] c.m.b.service.impl.DroneServiceImpl      : 无人机更新成功: id=1
+2026-06-01T22:50:05.836+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-6] c.m.b.service.impl.DroneServiceImpl      : 查询无人机详情: id=1
+2026-06-01T22:50:05.850+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-6] c.m.b.interceptor.RequestLogInterceptor  : 【请求结束】 method=PUT, url=/api/drone/1, statusCode=200, duration=174ms
+2026-06-01T22:50:05.873+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-7] c.m.b.interceptor.RequestLogInterceptor  : 【请求开始】 method=GET, url=/api/drone, queryString=pageNum=1&pageSize=3&keyword=, params=pageNum=1&pageSize=3&keyword=, clientIp=0:0:0:0:0:0:0:1
+2026-06-01T22:50:05.879+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-7] c.m.b.controller.DroneController         : 查询无人机列表请求: query=DroneQuery(keyword=, name=null, model=null, manufacturer=null, status=null), pageNum=1, pageSize=3
+2026-06-01T22:50:05.879+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-7] c.m.b.service.impl.DroneServiceImpl      : 查询无人机列表: query=DroneQuery(keyword=, name=null, model=null, manufacturer=null, status=null), pageNum=1, pageSize=3
+2026-06-01T22:50:05.901+08:00  INFO 12372 --- [basePlatform] [http-nio-8084-exec-7] c.m.b.interceptor.RequestLogInterceptor  : 【请求结束】 method=GET, url=/api/drone, statusCode=200, duration=28ms

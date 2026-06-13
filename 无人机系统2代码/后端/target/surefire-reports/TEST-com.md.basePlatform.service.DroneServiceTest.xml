@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.md.basePlatform.service.DroneServiceTest" time="0.396" tests="8" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.class.path" value="C:\Users\m1479\Desktop\b\baseplatform\target\test-classes;C:\Users\m1479\Desktop\b\baseplatform\target\classes;C:\Users\m1479\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.2.5\spring-boot-starter-web-3.2.5.jar;C:\Users\m1479\.m2\repository\org\springframework\boot\spring-boot-starter\3.2.5\spring-boot-starter-3.2.5.jar;C:\Users\m1479\.m2\repository\org\springframework\boot\spring-boot\3.2.5\spring-boot-3.2.5.jar;C:\Users\m1479\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.2.5\spring-boot-starter-logging-3.2.5.jar;C:\Users\m1479\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar;C:\Users\m1479\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar;C:\Users\m1479\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.21.1\log4j-to-slf4j-2.21.1.jar;C:\Users\m1479\.m2\repository\org\apache\logging\log4j\log4j-api\2.21.1\log4j-api-2.21.1.jar;C:\Users\m1479\.m2\repository\org\slf4j\jul-to-slf4j\2.0.13\jul-to-slf4j-2.0.13.jar;C:\Users\m1479\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\m1479\.m2\repository\org\yaml\snakeyaml\2.2\snakeyaml-2.2.jar;C:\Users\m1479\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.2.5\spring-boot-starter-json-3.2.5.jar;C:\Users\m1479\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.15.4\jackson-databind-2.15.4.jar;C:\Users\m1479\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.15.4\jackson-annotations-2.15.4.jar;C:\Users\m1479\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.15.4\jackson-core-2.15.4.jar;C:\Users\m1479\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.15.4\jackson-datatype-jdk8-2.15.4.jar;C:\Users\m1479\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.15.4\jackson-datatype-jsr310-2.15.4.jar;C:\Users\m1479\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.15.4\jackson-module-parameter-names-2.15.4.jar;C:\Users\m1479\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.2.5\spring-boot-starter-tomcat-3.2.5.jar;C:\Users\m1479\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.20\tomcat-embed-core-10.1.20.jar;C:\Users\m1479\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.20\tomcat-embed-websocket-10.1.20.jar;C:\Users\m1479\.m2\repository\org\springframework\spring-web\6.1.6\spring-web-6.1.6.jar;C:\Users\m1479\.m2\repository\org\springframework\spring-beans\6.1.6\spring-beans-6.1.6.jar;C:\Users\m1479\.m2\repository\io\micrometer\micrometer-observation\1.12.5\micrometer-observation-1.12.5.jar;C:\Users\m1479\.m2\repository\io\micrometer\micrometer-commons\1.12.5\micrometer-commons-1.12.5.jar;C:\Users\m1479\.m2\repository\org\springframework\spring-webmvc\6.1.6\spring-webmvc-6.1.6.jar;C:\Users\m1479\.m2\repository\org\springframework\spring-aop\6.1.6\spring-aop-6.1.6.jar;C:\Users\m1479\.m2\repository\org\springframework\spring-context\6.1.6\spring-context-6.1.6.jar;C:\Users\m1479\.m2\repository\org\springframework\spring-expression\6.1.6\spring-expression-6.1.6.jar;C:\Users\m1479\.m2\repository\org\springframework\boot\spring-boot-starter-validation\3.2.5\spring-boot-starter-validation-3.2.5.jar;C:\Users\m1479\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.20\tomcat-embed-el-10.1.20.jar;C:\Users\m1479\.m2\repository\org\hibernate\validator\hibernate-validator\8.0.1.Final\hibernate-validator-8.0.1.Final.jar;C:\Users\m1479\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\m1479\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\m1479\.m2\repository\com\fasterxml\classmate\1.6.0\classmate-1.6.0.jar;C:\Users\m1479\.m2\repository\org\apache\shiro\shiro-core\1.13.0\shiro-core-1.13.0.jar;C:\Users\m1479\.m2\repository\org\apache\shiro\shiro-lang\1.13.0\shiro-lang-1.13.0.jar;C:\Users\m1479\.m2\repository\org\apache\shiro\shiro-cache\1.13.0\shiro-cache-1.13.0.jar;C:\Users\m1479\.m2\repository\org\apache\shiro\shiro-crypto-hash\1.13.0\shiro-crypto-hash-1.13.0.jar;C:\Users\m1479\.m2\repository\org\apache\shiro\shiro-crypto-core\1.13.0\shiro-crypto-core-1.13.0.jar;C:\Users\m1479\.m2\repository\org\apache\shiro\shiro-crypto-cipher\1.13.0\shiro-crypto-cipher-1.13.0.jar;C:\Users\m1479\.m2\repository\org\apache\shiro\shiro-config-core\1.13.0\shiro-config-core-1.13.0.jar;C:\Users\m1479\.m2\repository\org\apache\shiro\shiro-config-ogdl\1.13.0\shiro-config-ogdl-1.13.0.jar;C:\Users\m1479\.m2\repository\commons-beanutils\commons-beanutils\1.9.4\commons-beanutils-1.9.4.jar;C:\Users\m1479\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\m1479\.m2\repository\org\apache\shiro\shiro-event\1.13.0\shiro-event-1.13.0.jar;C:\Users\m1479\.m2\repository\org\apache\shiro\shiro-spring\1.13.0\shiro-spring-1.13.0-jakarta.jar;C:\Users\m1479\.m2\repository\org\apache\shiro\shiro-web\1.13.0\shiro-web-1.13.0-jakarta.jar;C:\Users\m1479\.m2\repository\org\owasp\encoder\encoder\1.2.3\encoder-1.2.3.jar;C:\Users\m1479\.m2\repository\org\mybatis\spring\boot\mybatis-spring-boot-starter\3.0.3\mybatis-spring-boot-starter-3.0.3.jar;C:\Users\m1479\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.2.5\spring-boot-starter-jdbc-3.2.5.jar;C:\Users\m1479\.m2\repository\com\zaxxer\HikariCP\5.0.1\HikariCP-5.0.1.jar;C:\Users\m1479\.m2\repository\org\springframework\spring-jdbc\6.1.6\spring-jdbc-6.1.6.jar;C:\Users\m1479\.m2\repository\org\springframework\spring-tx\6.1.6\spring-tx-6.1.6.jar;C:\Users\m1479\.m2\repository\org\mybatis\spring\boot\mybatis-spring-boot-autoconfigure\3.0.3\mybatis-spring-boot-autoconfigure-3.0.3.jar;C:\Users\m1479\.m2\repository\org\mybatis\mybatis\3.5.14\mybatis-3.5.14.jar;C:\Users\m1479\.m2\repository\org\mybatis\mybatis-spring\3.0.3\mybatis-spring-3.0.3.jar;C:\Users\m1479\.m2\repository\org\xerial\sqlite-jdbc\3.45.3.0\sqlite-jdbc-3.45.3.0.jar;C:\Users\m1479\.m2\repository\org\slf4j\slf4j-api\2.0.13\slf4j-api-2.0.13.jar;C:\Users\m1479\.m2\repository\com\alibaba\druid-spring-boot-starter\1.2.23\druid-spring-boot-starter-1.2.23.jar;C:\Users\m1479\.m2\repository\com\alibaba\druid\1.2.23\druid-1.2.23.jar;C:\Users\m1479\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.2.5\spring-boot-autoconfigure-3.2.5.jar;C:\Users\m1479\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.5\jaxb-runtime-4.0.5.jar;C:\Users\m1479\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.5\jaxb-core-4.0.5.jar;C:\Users\m1479\.m2\repository\org\eclipse\angus\angus-activation\2.0.2\angus-activation-2.0.2.jar;C:\Users\m1479\.m2\repository\org\glassfish\jaxb\txw2\4.0.5\txw2-4.0.5.jar;C:\Users\m1479\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\m1479\.m2\repository\com\mysql\mysql-connector-j\8.0.33\mysql-connector-j-8.0.33.jar;C:\Users\m1479\.m2\repository\com\github\pagehelper\pagehelper-spring-boot-starter\1.4.1\pagehelper-spring-boot-starter-1.4.1.jar;C:\Users\m1479\.m2\repository\com\github\pagehelper\pagehelper-spring-boot-autoconfigure\1.4.1\pagehelper-spring-boot-autoconfigure-1.4.1.jar;C:\Users\m1479\.m2\repository\com\github\pagehelper\pagehelper\5.3.0\pagehelper-5.3.0.jar;C:\Users\m1479\.m2\repository\com\github\jsqlparser\jsqlparser\4.2\jsqlparser-4.2.jar;C:\Users\m1479\.m2\repository\org\projectlombok\lombok\1.18.32\lombok-1.18.32.jar;C:\Users\m1479\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-ui\2.5.0\springdoc-openapi-starter-webmvc-ui-2.5.0.jar;C:\Users\m1479\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-api\2.5.0\springdoc-openapi-starter-webmvc-api-2.5.0.jar;C:\Users\m1479\.m2\repository\org\springdoc\springdoc-openapi-starter-common\2.5.0\springdoc-openapi-starter-common-2.5.0.jar;C:\Users\m1479\.m2\repository\io\swagger\core\v3\swagger-core-jakarta\2.2.21\swagger-core-jakarta-2.2.21.jar;C:\Users\m1479\.m2\repository\org\apache\commons\commons-lang3\3.13.0\commons-lang3-3.13.0.jar;C:\Users\m1479\.m2\repository\io\swagger\core\v3\swagger-annotations-jakarta\2.2.21\swagger-annotations-jakarta-2.2.21.jar;C:\Users\m1479\.m2\repository\io\swagger\core\v3\swagger-models-jakarta\2.2.21\swagger-models-jakarta-2.2.21.jar;C:\Users\m1479\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.15.4\jackson-dataformat-yaml-2.15.4.jar;C:\Users\m1479\.m2\repository\org\webjars\swagger-ui\5.13.0\swagger-ui-5.13.0.jar;C:\Users\m1479\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.2.5\spring-boot-starter-test-3.2.5.jar;C:\Users\m1479\.m2\repository\org\springframework\boot\spring-boot-test\3.2.5\spring-boot-test-3.2.5.jar;C:\Users\m1479\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.2.5\spring-boot-test-autoconfigure-3.2.5.jar;C:\Users\m1479\.m2\repository\com\jayway\jsonpath\json-path\2.9.0\json-path-2.9.0.jar;C:\Users\m1479\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.2\jakarta.xml.bind-api-4.0.2.jar;C:\Users\m1479\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.3\jakarta.activation-api-2.1.3.jar;C:\Users\m1479\.m2\repository\net\minidev\json-smart\2.5.1\json-smart-2.5.1.jar;C:\Users\m1479\.m2\repository\net\minidev\accessors-smart\2.5.1\accessors-smart-2.5.1.jar;C:\Users\m1479\.m2\repository\org\ow2\asm\asm\9.6\asm-9.6.jar;C:\Users\m1479\.m2\repository\org\assertj\assertj-core\3.24.2\assertj-core-3.24.2.jar;C:\Users\m1479\.m2\repository\net\bytebuddy\byte-buddy\1.14.13\byte-buddy-1.14.13.jar;C:\Users\m1479\.m2\repository\org\awaitility\awaitility\4.2.1\awaitility-4.2.1.jar;C:\Users\m1479\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\m1479\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\m1479\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\m1479\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\m1479\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\m1479\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\m1479\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\m1479\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\m1479\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\m1479\.m2\repository\org\mockito\mockito-core\5.7.0\mockito-core-5.7.0.jar;C:\Users\m1479\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.13\byte-buddy-agent-1.14.13.jar;C:\Users\m1479\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\m1479\.m2\repository\org\mockito\mockito-junit-jupiter\5.7.0\mockito-junit-jupiter-5.7.0.jar;C:\Users\m1479\.m2\repository\org\skyscreamer\jsonassert\1.5.1\jsonassert-1.5.1.jar;C:\Users\m1479\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\m1479\.m2\repository\org\springframework\spring-core\6.1.6\spring-core-6.1.6.jar;C:\Users\m1479\.m2\repository\org\springframework\spring-jcl\6.1.6\spring-jcl-6.1.6.jar;C:\Users\m1479\.m2\repository\org\springframework\spring-test\6.1.6\spring-test-6.1.6.jar;C:\Users\m1479\.m2\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.boot.library.path" value="D:\jdk21\bin"/>
+    <property name="sun.java.command" value="C:\Users\m1479\AppData\Local\Temp\surefire6095823989782649989\surefirebooter-20260602224150192_3.jar C:\Users\m1479\AppData\Local\Temp\surefire6095823989782649989 2026-06-02T22-41-50_033-jvmRun1 surefire-20260602224150192_1tmp surefire_0-20260602224150192_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\m1479\Desktop\b\baseplatform\target\test-classes;C:\Users\m1479\Desktop\b\baseplatform\target\classes;C:\Users\m1479\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.2.5\spring-boot-starter-web-3.2.5.jar;C:\Users\m1479\.m2\repository\org\springframework\boot\spring-boot-starter\3.2.5\spring-boot-starter-3.2.5.jar;C:\Users\m1479\.m2\repository\org\springframework\boot\spring-boot\3.2.5\spring-boot-3.2.5.jar;C:\Users\m1479\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.2.5\spring-boot-starter-logging-3.2.5.jar;C:\Users\m1479\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar;C:\Users\m1479\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar;C:\Users\m1479\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.21.1\log4j-to-slf4j-2.21.1.jar;C:\Users\m1479\.m2\repository\org\apache\logging\log4j\log4j-api\2.21.1\log4j-api-2.21.1.jar;C:\Users\m1479\.m2\repository\org\slf4j\jul-to-slf4j\2.0.13\jul-to-slf4j-2.0.13.jar;C:\Users\m1479\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\m1479\.m2\repository\org\yaml\snakeyaml\2.2\snakeyaml-2.2.jar;C:\Users\m1479\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.2.5\spring-boot-starter-json-3.2.5.jar;C:\Users\m1479\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.15.4\jackson-databind-2.15.4.jar;C:\Users\m1479\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.15.4\jackson-annotations-2.15.4.jar;C:\Users\m1479\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.15.4\jackson-core-2.15.4.jar;C:\Users\m1479\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.15.4\jackson-datatype-jdk8-2.15.4.jar;C:\Users\m1479\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.15.4\jackson-datatype-jsr310-2.15.4.jar;C:\Users\m1479\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.15.4\jackson-module-parameter-names-2.15.4.jar;C:\Users\m1479\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.2.5\spring-boot-starter-tomcat-3.2.5.jar;C:\Users\m1479\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.20\tomcat-embed-core-10.1.20.jar;C:\Users\m1479\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.20\tomcat-embed-websocket-10.1.20.jar;C:\Users\m1479\.m2\repository\org\springframework\spring-web\6.1.6\spring-web-6.1.6.jar;C:\Users\m1479\.m2\repository\org\springframework\spring-beans\6.1.6\spring-beans-6.1.6.jar;C:\Users\m1479\.m2\repository\io\micrometer\micrometer-observation\1.12.5\micrometer-observation-1.12.5.jar;C:\Users\m1479\.m2\repository\io\micrometer\micrometer-commons\1.12.5\micrometer-commons-1.12.5.jar;C:\Users\m1479\.m2\repository\org\springframework\spring-webmvc\6.1.6\spring-webmvc-6.1.6.jar;C:\Users\m1479\.m2\repository\org\springframework\spring-aop\6.1.6\spring-aop-6.1.6.jar;C:\Users\m1479\.m2\repository\org\springframework\spring-context\6.1.6\spring-context-6.1.6.jar;C:\Users\m1479\.m2\repository\org\springframework\spring-expression\6.1.6\spring-expression-6.1.6.jar;C:\Users\m1479\.m2\repository\org\springframework\boot\spring-boot-starter-validation\3.2.5\spring-boot-starter-validation-3.2.5.jar;C:\Users\m1479\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.20\tomcat-embed-el-10.1.20.jar;C:\Users\m1479\.m2\repository\org\hibernate\validator\hibernate-validator\8.0.1.Final\hibernate-validator-8.0.1.Final.jar;C:\Users\m1479\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\m1479\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\m1479\.m2\repository\com\fasterxml\classmate\1.6.0\classmate-1.6.0.jar;C:\Users\m1479\.m2\repository\org\apache\shiro\shiro-core\1.13.0\shiro-core-1.13.0.jar;C:\Users\m1479\.m2\repository\org\apache\shiro\shiro-lang\1.13.0\shiro-lang-1.13.0.jar;C:\Users\m1479\.m2\repository\org\apache\shiro\shiro-cache\1.13.0\shiro-cache-1.13.0.jar;C:\Users\m1479\.m2\repository\org\apache\shiro\shiro-crypto-hash\1.13.0\shiro-crypto-hash-1.13.0.jar;C:\Users\m1479\.m2\repository\org\apache\shiro\shiro-crypto-core\1.13.0\shiro-crypto-core-1.13.0.jar;C:\Users\m1479\.m2\repository\org\apache\shiro\shiro-crypto-cipher\1.13.0\shiro-crypto-cipher-1.13.0.jar;C:\Users\m1479\.m2\repository\org\apache\shiro\shiro-config-core\1.13.0\shiro-config-core-1.13.0.jar;C:\Users\m1479\.m2\repository\org\apache\shiro\shiro-config-ogdl\1.13.0\shiro-config-ogdl-1.13.0.jar;C:\Users\m1479\.m2\repository\commons-beanutils\commons-beanutils\1.9.4\commons-beanutils-1.9.4.jar;C:\Users\m1479\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\m1479\.m2\repository\org\apache\shiro\shiro-event\1.13.0\shiro-event-1.13.0.jar;C:\Users\m1479\.m2\repository\org\apache\shiro\shiro-spring\1.13.0\shiro-spring-1.13.0-jakarta.jar;C:\Users\m1479\.m2\repository\org\apache\shiro\shiro-web\1.13.0\shiro-web-1.13.0-jakarta.jar;C:\Users\m1479\.m2\repository\org\owasp\encoder\encoder\1.2.3\encoder-1.2.3.jar;C:\Users\m1479\.m2\repository\org\mybatis\spring\boot\mybatis-spring-boot-starter\3.0.3\mybatis-spring-boot-starter-3.0.3.jar;C:\Users\m1479\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.2.5\spring-boot-starter-jdbc-3.2.5.jar;C:\Users\m1479\.m2\repository\com\zaxxer\HikariCP\5.0.1\HikariCP-5.0.1.jar;C:\Users\m1479\.m2\repository\org\springframework\spring-jdbc\6.1.6\spring-jdbc-6.1.6.jar;C:\Users\m1479\.m2\repository\org\springframework\spring-tx\6.1.6\spring-tx-6.1.6.jar;C:\Users\m1479\.m2\repository\org\mybatis\spring\boot\mybatis-spring-boot-autoconfigure\3.0.3\mybatis-spring-boot-autoconfigure-3.0.3.jar;C:\Users\m1479\.m2\repository\org\mybatis\mybatis\3.5.14\mybatis-3.5.14.jar;C:\Users\m1479\.m2\repository\org\mybatis\mybatis-spring\3.0.3\mybatis-spring-3.0.3.jar;C:\Users\m1479\.m2\repository\org\xerial\sqlite-jdbc\3.45.3.0\sqlite-jdbc-3.45.3.0.jar;C:\Users\m1479\.m2\repository\org\slf4j\slf4j-api\2.0.13\slf4j-api-2.0.13.jar;C:\Users\m1479\.m2\repository\com\alibaba\druid-spring-boot-starter\1.2.23\druid-spring-boot-starter-1.2.23.jar;C:\Users\m1479\.m2\repository\com\alibaba\druid\1.2.23\druid-1.2.23.jar;C:\Users\m1479\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.2.5\spring-boot-autoconfigure-3.2.5.jar;C:\Users\m1479\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.5\jaxb-runtime-4.0.5.jar;C:\Users\m1479\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.5\jaxb-core-4.0.5.jar;C:\Users\m1479\.m2\repository\org\eclipse\angus\angus-activation\2.0.2\angus-activation-2.0.2.jar;C:\Users\m1479\.m2\repository\org\glassfish\jaxb\txw2\4.0.5\txw2-4.0.5.jar;C:\Users\m1479\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\m1479\.m2\repository\com\mysql\mysql-connector-j\8.0.33\mysql-connector-j-8.0.33.jar;C:\Users\m1479\.m2\repository\com\github\pagehelper\pagehelper-spring-boot-starter\1.4.1\pagehelper-spring-boot-starter-1.4.1.jar;C:\Users\m1479\.m2\repository\com\github\pagehelper\pagehelper-spring-boot-autoconfigure\1.4.1\pagehelper-spring-boot-autoconfigure-1.4.1.jar;C:\Users\m1479\.m2\repository\com\github\pagehelper\pagehelper\5.3.0\pagehelper-5.3.0.jar;C:\Users\m1479\.m2\repository\com\github\jsqlparser\jsqlparser\4.2\jsqlparser-4.2.jar;C:\Users\m1479\.m2\repository\org\projectlombok\lombok\1.18.32\lombok-1.18.32.jar;C:\Users\m1479\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-ui\2.5.0\springdoc-openapi-starter-webmvc-ui-2.5.0.jar;C:\Users\m1479\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-api\2.5.0\springdoc-openapi-starter-webmvc-api-2.5.0.jar;C:\Users\m1479\.m2\repository\org\springdoc\springdoc-openapi-starter-common\2.5.0\springdoc-openapi-starter-common-2.5.0.jar;C:\Users\m1479\.m2\repository\io\swagger\core\v3\swagger-core-jakarta\2.2.21\swagger-core-jakarta-2.2.21.jar;C:\Users\m1479\.m2\repository\org\apache\commons\commons-lang3\3.13.0\commons-lang3-3.13.0.jar;C:\Users\m1479\.m2\repository\io\swagger\core\v3\swagger-annotations-jakarta\2.2.21\swagger-annotations-jakarta-2.2.21.jar;C:\Users\m1479\.m2\repository\io\swagger\core\v3\swagger-models-jakarta\2.2.21\swagger-models-jakarta-2.2.21.jar;C:\Users\m1479\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.15.4\jackson-dataformat-yaml-2.15.4.jar;C:\Users\m1479\.m2\repository\org\webjars\swagger-ui\5.13.0\swagger-ui-5.13.0.jar;C:\Users\m1479\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.2.5\spring-boot-starter-test-3.2.5.jar;C:\Users\m1479\.m2\repository\org\springframework\boot\spring-boot-test\3.2.5\spring-boot-test-3.2.5.jar;C:\Users\m1479\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.2.5\spring-boot-test-autoconfigure-3.2.5.jar;C:\Users\m1479\.m2\repository\com\jayway\jsonpath\json-path\2.9.0\json-path-2.9.0.jar;C:\Users\m1479\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.2\jakarta.xml.bind-api-4.0.2.jar;C:\Users\m1479\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.3\jakarta.activation-api-2.1.3.jar;C:\Users\m1479\.m2\repository\net\minidev\json-smart\2.5.1\json-smart-2.5.1.jar;C:\Users\m1479\.m2\repository\net\minidev\accessors-smart\2.5.1\accessors-smart-2.5.1.jar;C:\Users\m1479\.m2\repository\org\ow2\asm\asm\9.6\asm-9.6.jar;C:\Users\m1479\.m2\repository\org\assertj\assertj-core\3.24.2\assertj-core-3.24.2.jar;C:\Users\m1479\.m2\repository\net\bytebuddy\byte-buddy\1.14.13\byte-buddy-1.14.13.jar;C:\Users\m1479\.m2\repository\org\awaitility\awaitility\4.2.1\awaitility-4.2.1.jar;C:\Users\m1479\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\m1479\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\m1479\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\m1479\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\m1479\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\m1479\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\m1479\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\m1479\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\m1479\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\m1479\.m2\repository\org\mockito\mockito-core\5.7.0\mockito-core-5.7.0.jar;C:\Users\m1479\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.13\byte-buddy-agent-1.14.13.jar;C:\Users\m1479\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\m1479\.m2\repository\org\mockito\mockito-junit-jupiter\5.7.0\mockito-junit-jupiter-5.7.0.jar;C:\Users\m1479\.m2\repository\org\skyscreamer\jsonassert\1.5.1\jsonassert-1.5.1.jar;C:\Users\m1479\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\m1479\.m2\repository\org\springframework\spring-core\6.1.6\spring-core-6.1.6.jar;C:\Users\m1479\.m2\repository\org\springframework\spring-jcl\6.1.6\spring-jcl-6.1.6.jar;C:\Users\m1479\.m2\repository\org\springframework\spring-test\6.1.6\spring-test-6.1.6.jar;C:\Users\m1479\.m2\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\m1479"/>
+    <property name="user.language" value="zh"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-04-21"/>
+    <property name="java.home" value="D:\jdk21"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\m1479\Desktop\b\baseplatform"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="surefire.real.class.path" value="C:\Users\m1479\AppData\Local\Temp\surefire6095823989782649989\surefirebooter-20260602224150192_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.11+9-LTS-211"/>
+    <property name="user.name" value="m1479"/>
+    <property name="stdout.encoding" value="GBK"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\m1479\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\m1479\AppData\Local\Temp\"/>
+    <property name="java.version" value="21.0.11"/>
+    <property name="user.dir" value="C:\Users\m1479\Desktop\b\baseplatform"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="24456"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
+    <property name="native.encoding" value="GBK"/>
+    <property name="java.library.path" value="D:\jdk21\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;c:\Users\m1479\.trae-cn\tools\trae-gopls\current;c:\Users\m1479\.trae-cn\sdks\workspaces\0d2c8b1b\versions\node\current;c:\Users\m1479\.trae-cn\sdks\versions\node\current;D:\jdk21\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\apache-maven-3.9.15\bin;;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\nodejs\;C:\Users\m1479\AppData\Local\Microsoft\WindowsApps;C:\Users\m1479\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Java\jdk-25\bin;D:\Kiro\bin;D:\IntelliJ IDEA 2025.1\bin;;D:\cursor\resources\app\bin;C:\Users\m1479\AppData\Roaming\npm;c:\Users\m1479\.trae-cn\extensions\vscjava.vscode-java-debug-0.59.0\bundled\scripts\noConfigScripts;d:\cursor\Trae CN\resources\app\node_modules\@vscode\ripgrep\bin;d:\cursor\Trae CN\resources\app\node_modules\@vscode\ripgrep\bin;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="GBK"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="21.0.11+9-LTS-211"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+    <property name="LOGGED_APPLICATION_NAME" value="[basePlatform] "/>
+  </properties>
+  <testcase name="testFindAll" classname="com.md.basePlatform.service.DroneServiceTest" time="0.161">
+    <system-out><![CDATA[2026-06-02T22:41:56.444+08:00  INFO 24456 --- [basePlatform] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.md.basePlatform.service.DroneServiceTest]: DroneServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-02T22:41:56.458+08:00  INFO 24456 --- [basePlatform] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.md.basePlatform.BasePlatformApplication for test class com.md.basePlatform.service.DroneServiceTest
+2026-06-02T22:41:56.471+08:00  INFO 24456 --- [basePlatform] [           main] c.m.b.service.impl.DroneServiceImpl      : 查询无人机列表: query=DroneQuery(keyword=null, name=null, model=null, manufacturer=null, status=null), pageNum=1, pageSize=10
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@439d649c]
+JDBC Connection [com.alibaba.druid.pool.DruidStatementConnection@1cb73a92] will be managed by Spring
+==>  Preparing: SELECT id, name, model, manufacturer, weight, max_altitude, max_speed, battery_capacity, flight_time, camera_resolution, status, create_time, update_time FROM drone ORDER BY create_time DESC
+==> Parameters: 
+<==    Columns: id, name, model, manufacturer, weight, max_altitude, max_speed, battery_capacity, flight_time, camera_resolution, status, create_time, update_time
+<==        Row: 1, 测试无人机1, T001, 测试厂商A, 1.5, 500, 100, 4000, 30, 4K, 1, 2026-06-02 14:41:53, 2026-06-02 14:41:53
+<==        Row: 2, 测试无人机2, T002, 测试厂商B, 2.0, 800, 120, 5000, 40, 4K, 1, 2026-06-02 14:41:53, 2026-06-02 14:41:53
+<==        Row: 3, 测试无人机3, T003, 测试厂商C, 1.2, 600, 90, 3500, 25, 1080P, 0, 2026-06-02 14:41:53, 2026-06-02 14:41:53
+<==      Total: 3
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@439d649c]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@439d649c]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@439d649c]
+]]></system-out>
+  </testcase>
+  <testcase name="testDelete_NotFound" classname="com.md.basePlatform.service.DroneServiceTest" time="0.01">
+    <system-out><![CDATA[2026-06-02T22:41:56.626+08:00  INFO 24456 --- [basePlatform] [           main] c.m.b.service.impl.DroneServiceImpl      : 删除无人机: id=9999
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@54e3cba2]
+JDBC Connection [com.alibaba.druid.pool.DruidStatementConnection@1cb73a92] will be managed by Spring
+==>  Preparing: SELECT id, name, model, manufacturer, weight, max_altitude, max_speed, battery_capacity, flight_time, camera_resolution, status, create_time, update_time FROM drone WHERE id = ?
+==> Parameters: 9999(Long)
+<==      Total: 0
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@54e3cba2]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@54e3cba2]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@54e3cba2]
+]]></system-out>
+  </testcase>
+  <testcase name="testFindById_Success" classname="com.md.basePlatform.service.DroneServiceTest" time="0.044">
+    <system-out><![CDATA[2026-06-02T22:41:56.633+08:00  INFO 24456 --- [basePlatform] [           main] c.m.b.service.impl.DroneServiceImpl      : 创建无人机: dto=DroneDTO(id=null, name=TestDrone, model=T001, manufacturer=null, weight=1.0, maxAltitude=null, maxSpeed=null, batteryCapacity=4000, flightTime=30, cameraResolution=null, status=null, createTime=null, updateTime=null)
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@43f5b014]
+JDBC Connection [com.alibaba.druid.pool.DruidStatementConnection@1cb73a92] will be managed by Spring
+==>  Preparing: INSERT INTO drone (name, model, manufacturer, weight, max_altitude, max_speed, battery_capacity, flight_time, camera_resolution, status, create_time, update_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+==> Parameters: TestDrone(String), T001(String), null, 1.0(Double), null, null, 4000(Integer), 30(Integer), null, 1(Integer), 2026-06-02T22:41:56.633720700(LocalDateTime), 2026-06-02T22:41:56.633720700(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@43f5b014]
+2026-06-02T22:41:56.649+08:00  INFO 24456 --- [basePlatform] [           main] c.m.b.service.impl.DroneServiceImpl      : 无人机创建成功: id=4
+2026-06-02T22:41:56.649+08:00  INFO 24456 --- [basePlatform] [           main] c.m.b.service.impl.DroneServiceImpl      : 查询无人机详情: id=4
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@43f5b014] from current transaction
+==>  Preparing: SELECT id, name, model, manufacturer, weight, max_altitude, max_speed, battery_capacity, flight_time, camera_resolution, status, create_time, update_time FROM drone WHERE id = ?
+==> Parameters: 4(Long)
+<==    Columns: id, name, model, manufacturer, weight, max_altitude, max_speed, battery_capacity, flight_time, camera_resolution, status, create_time, update_time
+<==        Row: 4, TestDrone, T001, null, 1.0, null, null, 4000, 30, null, 1, 2026-06-02T22:41:56.633720700, 2026-06-02T22:41:56.633720700
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@43f5b014]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@43f5b014]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@43f5b014]
+]]></system-out>
+  </testcase>
+  <testcase name="testUpdate_NotFound" classname="com.md.basePlatform.service.DroneServiceTest" time="0.007">
+    <system-out><![CDATA[2026-06-02T22:41:56.682+08:00  INFO 24456 --- [basePlatform] [           main] c.m.b.service.impl.DroneServiceImpl      : 更新无人机: id=9999, dto=DroneDTO(id=null, name=Test, model=T001, manufacturer=null, weight=1.0, maxAltitude=null, maxSpeed=null, batteryCapacity=4000, flightTime=30, cameraResolution=null, status=null, createTime=null, updateTime=null)
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4c31b6c2]
+JDBC Connection [com.alibaba.druid.pool.DruidStatementConnection@1cb73a92] will be managed by Spring
+==>  Preparing: SELECT id, name, model, manufacturer, weight, max_altitude, max_speed, battery_capacity, flight_time, camera_resolution, status, create_time, update_time FROM drone WHERE id = ?
+==> Parameters: 9999(Long)
+<==      Total: 0
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4c31b6c2]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4c31b6c2]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4c31b6c2]
+]]></system-out>
+  </testcase>
+  <testcase name="testCreate" classname="com.md.basePlatform.service.DroneServiceTest" time="0.04">
+    <system-out><![CDATA[2026-06-02T22:41:56.687+08:00  INFO 24456 --- [basePlatform] [           main] c.m.b.service.impl.DroneServiceImpl      : 创建无人机: dto=DroneDTO(id=null, name=TestCreate, model=T002, manufacturer=TestManufacturer, weight=2.0, maxAltitude=500, maxSpeed=100, batteryCapacity=5000, flightTime=40, cameraResolution=4K, status=1, createTime=null, updateTime=null)
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4e8b36af]
+JDBC Connection [com.alibaba.druid.pool.DruidStatementConnection@1cb73a92] will be managed by Spring
+==>  Preparing: INSERT INTO drone (name, model, manufacturer, weight, max_altitude, max_speed, battery_capacity, flight_time, camera_resolution, status, create_time, update_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+==> Parameters: TestCreate(String), T002(String), TestManufacturer(String), 2.0(Double), 500(Integer), 100(Integer), 5000(Integer), 40(Integer), 4K(String), 1(Integer), 2026-06-02T22:41:56.687705600(LocalDateTime), 2026-06-02T22:41:56.687705600(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4e8b36af]
+2026-06-02T22:41:56.693+08:00  INFO 24456 --- [basePlatform] [           main] c.m.b.service.impl.DroneServiceImpl      : 无人机创建成功: id=4
+2026-06-02T22:41:56.693+08:00  INFO 24456 --- [basePlatform] [           main] c.m.b.service.impl.DroneServiceImpl      : 查询无人机详情: id=4
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4e8b36af] from current transaction
+==>  Preparing: SELECT id, name, model, manufacturer, weight, max_altitude, max_speed, battery_capacity, flight_time, camera_resolution, status, create_time, update_time FROM drone WHERE id = ?
+==> Parameters: 4(Long)
+<==    Columns: id, name, model, manufacturer, weight, max_altitude, max_speed, battery_capacity, flight_time, camera_resolution, status, create_time, update_time
+<==        Row: 4, TestCreate, T002, TestManufacturer, 2.0, 500, 100, 5000, 40, 4K, 1, 2026-06-02T22:41:56.687705600, 2026-06-02T22:41:56.687705600
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4e8b36af]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4e8b36af]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4e8b36af]
+]]></system-out>
+  </testcase>
+  <testcase name="testDelete" classname="com.md.basePlatform.service.DroneServiceTest" time="0.055">
+    <system-out><![CDATA[2026-06-02T22:41:56.726+08:00  INFO 24456 --- [basePlatform] [           main] c.m.b.service.impl.DroneServiceImpl      : 创建无人机: dto=DroneDTO(id=null, name=TestDelete, model=T004, manufacturer=null, weight=1.0, maxAltitude=null, maxSpeed=null, batteryCapacity=4000, flightTime=30, cameraResolution=null, status=null, createTime=null, updateTime=null)
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4cd079fe]
+JDBC Connection [com.alibaba.druid.pool.DruidStatementConnection@1cb73a92] will be managed by Spring
+==>  Preparing: INSERT INTO drone (name, model, manufacturer, weight, max_altitude, max_speed, battery_capacity, flight_time, camera_resolution, status, create_time, update_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+==> Parameters: TestDelete(String), T004(String), null, 1.0(Double), null, null, 4000(Integer), 30(Integer), null, 1(Integer), 2026-06-02T22:41:56.726147500(LocalDateTime), 2026-06-02T22:41:56.726147500(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4cd079fe]
+2026-06-02T22:41:56.739+08:00  INFO 24456 --- [basePlatform] [           main] c.m.b.service.impl.DroneServiceImpl      : 无人机创建成功: id=4
+2026-06-02T22:41:56.740+08:00  INFO 24456 --- [basePlatform] [           main] c.m.b.service.impl.DroneServiceImpl      : 删除无人机: id=4
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4cd079fe] from current transaction
+==>  Preparing: SELECT id, name, model, manufacturer, weight, max_altitude, max_speed, battery_capacity, flight_time, camera_resolution, status, create_time, update_time FROM drone WHERE id = ?
+==> Parameters: 4(Long)
+<==    Columns: id, name, model, manufacturer, weight, max_altitude, max_speed, battery_capacity, flight_time, camera_resolution, status, create_time, update_time
+<==        Row: 4, TestDelete, T004, null, 1.0, null, null, 4000, 30, null, 1, 2026-06-02T22:41:56.726147500, 2026-06-02T22:41:56.726147500
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4cd079fe]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4cd079fe] from current transaction
+==>  Preparing: DELETE FROM drone WHERE id = ?
+==> Parameters: 4(Long)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4cd079fe]
+2026-06-02T22:41:56.741+08:00  INFO 24456 --- [basePlatform] [           main] c.m.b.service.impl.DroneServiceImpl      : 无人机删除成功: id=4
+2026-06-02T22:41:56.741+08:00  INFO 24456 --- [basePlatform] [           main] c.m.b.service.impl.DroneServiceImpl      : 查询无人机详情: id=4
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4cd079fe] from current transaction
+==>  Preparing: SELECT id, name, model, manufacturer, weight, max_altitude, max_speed, battery_capacity, flight_time, camera_resolution, status, create_time, update_time FROM drone WHERE id = ?
+==> Parameters: 4(Long)
+<==      Total: 0
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4cd079fe]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4cd079fe]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4cd079fe]
+]]></system-out>
+  </testcase>
+  <testcase name="testFindById_NotFound" classname="com.md.basePlatform.service.DroneServiceTest" time="0.007">
+    <system-out><![CDATA[2026-06-02T22:41:56.785+08:00  INFO 24456 --- [basePlatform] [           main] c.m.b.service.impl.DroneServiceImpl      : 查询无人机详情: id=9999
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@501b15b9]
+JDBC Connection [com.alibaba.druid.pool.DruidStatementConnection@1cb73a92] will be managed by Spring
+==>  Preparing: SELECT id, name, model, manufacturer, weight, max_altitude, max_speed, battery_capacity, flight_time, camera_resolution, status, create_time, update_time FROM drone WHERE id = ?
+==> Parameters: 9999(Long)
+<==      Total: 0
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@501b15b9]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@501b15b9]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@501b15b9]
+]]></system-out>
+  </testcase>
+  <testcase name="testUpdate" classname="com.md.basePlatform.service.DroneServiceTest" time="0.045">
+    <system-out><![CDATA[2026-06-02T22:41:56.795+08:00  INFO 24456 --- [basePlatform] [           main] c.m.b.service.impl.DroneServiceImpl      : 创建无人机: dto=DroneDTO(id=null, name=TestUpdate, model=T003, manufacturer=null, weight=1.5, maxAltitude=null, maxSpeed=null, batteryCapacity=3000, flightTime=25, cameraResolution=null, status=null, createTime=null, updateTime=null)
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@c5e7696]
+JDBC Connection [com.alibaba.druid.pool.DruidStatementConnection@1cb73a92] will be managed by Spring
+==>  Preparing: INSERT INTO drone (name, model, manufacturer, weight, max_altitude, max_speed, battery_capacity, flight_time, camera_resolution, status, create_time, update_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+==> Parameters: TestUpdate(String), T003(String), null, 1.5(Double), null, null, 3000(Integer), 25(Integer), null, 1(Integer), 2026-06-02T22:41:56.795301400(LocalDateTime), 2026-06-02T22:41:56.795301400(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@c5e7696]
+2026-06-02T22:41:56.800+08:00  INFO 24456 --- [basePlatform] [           main] c.m.b.service.impl.DroneServiceImpl      : 无人机创建成功: id=4
+2026-06-02T22:41:56.801+08:00  INFO 24456 --- [basePlatform] [           main] c.m.b.service.impl.DroneServiceImpl      : 更新无人机: id=4, dto=DroneDTO(id=null, name=UpdatedName, model=T003, manufacturer=null, weight=1.5, maxAltitude=null, maxSpeed=null, batteryCapacity=3000, flightTime=25, cameraResolution=null, status=null, createTime=null, updateTime=null)
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@c5e7696] from current transaction
+==>  Preparing: SELECT id, name, model, manufacturer, weight, max_altitude, max_speed, battery_capacity, flight_time, camera_resolution, status, create_time, update_time FROM drone WHERE id = ?
+==> Parameters: 4(Long)
+<==    Columns: id, name, model, manufacturer, weight, max_altitude, max_speed, battery_capacity, flight_time, camera_resolution, status, create_time, update_time
+<==        Row: 4, TestUpdate, T003, null, 1.5, null, null, 3000, 25, null, 1, 2026-06-02T22:41:56.795301400, 2026-06-02T22:41:56.795301400
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@c5e7696]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@c5e7696] from current transaction
+==>  Preparing: UPDATE drone SET name = ?, model = ?, weight = ?, battery_capacity = ?, flight_time = ?, update_time = ? WHERE id = ?
+==> Parameters: UpdatedName(String), T003(String), 1.5(Double), 3000(Integer), 25(Integer), 2026-06-02T22:41:56.802340700(LocalDateTime), 4(Long)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@c5e7696]
+2026-06-02T22:41:56.803+08:00  INFO 24456 --- [basePlatform] [           main] c.m.b.service.impl.DroneServiceImpl      : 无人机更新成功: id=4
+2026-06-02T22:41:56.803+08:00  INFO 24456 --- [basePlatform] [           main] c.m.b.service.impl.DroneServiceImpl      : 查询无人机详情: id=4
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@c5e7696] from current transaction
+==>  Preparing: SELECT id, name, model, manufacturer, weight, max_altitude, max_speed, battery_capacity, flight_time, camera_resolution, status, create_time, update_time FROM drone WHERE id = ?
+==> Parameters: 4(Long)
+<==    Columns: id, name, model, manufacturer, weight, max_altitude, max_speed, battery_capacity, flight_time, camera_resolution, status, create_time, update_time
+<==        Row: 4, UpdatedName, T003, null, 1.5, null, null, 3000, 25, null, 1, 2026-06-02T22:41:56.795301400, 2026-06-02T22:41:56.802340700
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@c5e7696]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@c5e7696]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@c5e7696]
+]]></system-out>
+  </testcase>
+</testsuite>

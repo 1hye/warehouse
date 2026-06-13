@@ -1,0 +1,5 @@
+com\md\basePlatform\controller\DroneControllerTest.class
+com\md\basePlatform\service\DroneServiceTest.class
+com\md\basePlatform\BasePlatformApplicationTests.class
+com\md\basePlatform\service\UserServiceTest.class
+com\md\basePlatform\controller\AuthControllerTest.class

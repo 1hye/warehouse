@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>无人机信息管理系统</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.4.21/dist/vue.global.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.8/dist/axios.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { padding: 20px; }
+        .modal { display: none; }
+        .modal.show { display: block; }
+        .modal-backdrop { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); }
+        .modal-content { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border-radius: 8px; width: 90%; max-width: 500px; }
+    </style>
+</head>
+<body>
+    <div id="app" class="container">
+        <h1 class="mb-4 text-center">无人机信息管理系统</h1>
+        
+        <!-- 搜索和添加按钮 -->
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <input v-model="searchName" type="text" class="form-control" placeholder="按名称搜索..." @keyup.enter="loadDrones">
+            </div>
+            <div class="col-md-6 text-right">
+                <button @click="showAddModal" class="btn btn-primary">添加无人机</button>
+            </div>
+        </div>
+
+        <!-- 无人机列表 -->
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>名称</th>
+                    <th>型号</th>
+                    <th>厂商</th>
+                    <th>重量(kg)</th>
+                    <th>最大高度(m)</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="drone in drones" :key="drone.id">
+                    <td>{{ drone.id }}</td>
+                    <td>{{ drone.name }}</td>
+                    <td>{{ drone.model }}</td>
+                    <td>{{ drone.manufacturer }}</td>
+                    <td>{{ drone.weight }}</td>
+                    <td>{{ drone.maxAltitude }}</td>
+                    <td><span :class="drone.status == 1 ? 'badge bg-success' : 'badge bg-danger'">{{ drone.status == 1 ? '启用' : '禁用' }}</span></td>
+                    <td>
+                        <button @click="editDrone(drone)" class="btn btn-sm btn-warning me-1">编辑</button>
+                        <button @click="deleteDrone(drone.id)" class="btn btn-sm btn-danger">删除</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- 分页 -->
+        <div class="text-center">
+            <button @click="prevPage" :disabled="currentPage == 1" class="btn btn-secondary me-2">上一页</button>
+            <span>第 {{ currentPage }} / {{ totalPages }} 页</span>
+            <button @click="nextPage" :disabled="currentPage >= totalPages" class="btn btn-secondary ms-2">下一页</button>
+        </div>
+
+        <!-- 添加/编辑模态框 -->
+        <div v-if="showModal" class="modal-backdrop" @click="closeModal">
+            <div class="modal-content" @click.stop>
+                <h3>{{ editingDrone ? '编辑无人机' : '添加无人机' }}</h3>
+                <form @submit.prevent="saveDrone">
+                    <div class="mb-3">
+                        <label>名称</label>
+                        <input v-model="formData.name" type="text" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label>型号</label>
+                        <input v-model="formData.model" type="text" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label>厂商</label>
+                        <input v-model="formData.manufacturer" type="text" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label>重量(kg)</label>
+                        <input v-model.number="formData.weight" type="number" step="0.1" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label>最大高度(m)</label>
+                        <input v-model.number="formData.maxAltitude" type="number" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label>最大速度(km/h)</label>
+                        <input v-model.number="formData.maxSpeed" type="number" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label>电池容量(mAh)</label>
+                        <input v-model.number="formData.batteryCapacity" type="number" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label>续航时间(分钟)</label>
+                        <input v-model.number="formData.flightTime" type="number" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label>摄像头分辨率</label>
+                        <input v-model="formData.cameraResolution" type="text" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label>状态</label>
+                        <select v-model.number="formData.status" class="form-control">
+                            <option :value="1">启用</option>
+                            <option :value="0">禁用</option>
+                        </select>
+                    </div>
+                    <div class="text-right">
+                        <button type="button" @click="closeModal" class="btn btn-secondary me-2">取消</button>
+                        <button type="submit" class="btn btn-primary">保存</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const { createApp } = Vue
+
+        createApp({
+            data() {
+                return {
+                    drones: [],
+                    searchName: '',
+                    currentPage: 1,
+                    totalPages: 1,
+                    showModal: false,
+                    editingDrone: null,
+                    formData: {
+                        name: '',
+                        model: '',
+                        manufacturer: '',
+                        weight: 0,
+                        maxAltitude: 0,
+                        maxSpeed: 0,
+                        batteryCapacity: 0,
+                        flightTime: 0,
+                        cameraResolution: '',
+                        status: 1
+                    }
+                }
+            },
+            mounted() {
+                this.loadDrones()
+            },
+            methods: {
+                async loadDrones() {
+                    try {
+                        const params = new URLSearchParams()
+                        if (this.searchName) params.append('name', this.searchName)
+                        params.append('pageNum', this.currentPage)
+                        params.append('pageSize', 10)
+                        
+                        const response = await axios.get('/api/drone?' + params.toString())
+                        if (response.data.code === 200) {
+                            this.drones = response.data.data.list
+                            this.totalPages = response.data.data.pages || 1
+                        }
+                    } catch (error) {
+                        alert('加载失败: ' + error.message)
+                    }
+                },
+                showAddModal() {
+                    this.editingDrone = null
+                    this.formData = {
+                        name: '',
+                        model: '',
+                        manufacturer: '',
+                        weight: 0,
+                        maxAltitude: 0,
+                        maxSpeed: 0,
+                        batteryCapacity: 0,
+                        flightTime: 0,
+                        cameraResolution: '',
+                        status: 1
+                    }
+                    this.showModal = true
+                },
+                editDrone(drone) {
+                    this.editingDrone = drone
+                    this.formData = {
+                        name: drone.name,
+                        model: drone.model,
+                        manufacturer: drone.manufacturer,
+                        weight: drone.weight,
+                        maxAltitude: drone.maxAltitude,
+                        maxSpeed: drone.maxSpeed,
+                        batteryCapacity: drone.batteryCapacity,
+                        flightTime: drone.flightTime,
+                        cameraResolution: drone.cameraResolution,
+                        status: drone.status
+                    }
+                    this.showModal = true
+                },
+                closeModal() {
+                    this.showModal = false
+                    this.editingDrone = null
+                },
+                async saveDrone() {
+                    try {
+                        if (this.editingDrone) {
+                            await axios.put('/api/drone/' + this.editingDrone.id, this.formData)
+                        } else {
+                            await axios.post('/api/drone', this.formData)
+                        }
+                        this.closeModal()
+                        this.loadDrones()
+                        alert('保存成功')
+                    } catch (error) {
+                        alert('保存失败: ' + error.message)
+                    }
+                },
+                async deleteDrone(id) {
+                    if (!confirm('确定要删除这个无人机吗？')) return
+                    try {
+                        await axios.delete('/api/drone/' + id)
+                        this.loadDrones()
+                        alert('删除成功')
+                    } catch (error) {
+                        alert('删除失败: ' + error.message)
+                    }
+                },
+                prevPage() {
+                    if (this.currentPage > 1) {
+                        this.currentPage--
+                        this.loadDrones()
+                    }
+                },
+                nextPage() {
+                    if (this.currentPage < this.totalPages) {
+                        this.currentPage++
+                        this.loadDrones()
+                    }
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+</html>
