@@ -1,0 +1,14 @@
+com\example\uav\service\IUavService.class
+com\example\uav\config\WebConfig.class
+com\example\uav\common\AjaxResult.class
+com\example\uav\common\BaseEntity.class
+com\example\uav\service\impl\UavServiceImpl.class
+com\example\uav\UavApplication.class
+com\example\uav\controller\UavController.class
+com\example\uav\config\ShiroRealm.class
+com\example\uav\interceptor\LogInterceptor.class
+com\example\uav\controller\LoginController.class
+com\example\uav\domain\Uav.class
+com\example\uav\repository\UavMapper.class
+com\example\uav\config\ShiroConfig.class
+com\example\uav\exception\GlobalExceptionHandler.class

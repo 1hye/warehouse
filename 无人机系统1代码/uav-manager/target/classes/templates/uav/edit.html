@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>编辑无人机</title>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container-fluid" style="margin-top: 20px;">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">编辑无人机</h3>
+        </div>
+        <div class="panel-body">
+            <form id="uavForm" class="form-horizontal" style="max-width: 700px;">
+                <input type="hidden" id="id" name="id" th:value="${uav.id}">
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">名称：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="name" name="name"
+                               th:value="${uav.name}" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">类型：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="type" name="type"
+                               th:value="${uav.type}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">序列号：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="serialNumber" name="serialNumber"
+                               th:value="${uav.serialNumber}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">飞行时间(分钟)：</label>
+                    <div class="col-sm-9">
+                        <input type="number" class="form-control" id="maxFlightTime" name="maxFlightTime"
+                               th:value="${uav.maxFlightTime}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">飞行距离(公里)：</label>
+                    <div class="col-sm-9">
+                        <input type="number" step="0.1" class="form-control" id="maxRange" name="maxRange"
+                               th:value="${uav.maxRange}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">飞行高度(米)：</label>
+                    <div class="col-sm-9">
+                        <input type="number" step="0.1" class="form-control" id="maxAltitude" name="maxAltitude"
+                               th:value="${uav.maxAltitude}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">有效载荷(千克)：</label>
+                    <div class="col-sm-9">
+                        <input type="number" step="0.1" class="form-control" id="payloadCapacity" name="payloadCapacity"
+                               th:value="${uav.payloadCapacity}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">电池容量(mAh)：</label>
+                    <div class="col-sm-9">
+                        <input type="number" class="form-control" id="batteryCapacity" name="batteryCapacity"
+                               th:value="${uav.batteryCapacity}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">重量(克)：</label>
+                    <div class="col-sm-9">
+                        <input type="number" step="0.1" class="form-control" id="weight" name="weight"
+                               th:value="${uav.weight}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">状态：</label>
+                    <div class="col-sm-9">
+                        <select class="form-control" id="status" name="status">
+                            <option value="active" th:selected="${uav.status == 'active'}">正常</option>
+                            <option value="maintenance" th:selected="${uav.status == 'maintenance'}">维护中</option>
+                            <option value="retired" th:selected="${uav.status == 'retired'}">已退役</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">描述：</label>
+                    <div class="col-sm-9">
+                        <textarea class="form-control" id="description" name="description" rows="3"
+                                  th:text="${uav.description}"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-9">
+                        <button type="button" class="btn btn-primary" onclick="submitForm()">
+                            <span class="glyphicon glyphicon-save"></span> 保存
+                        </button>
+                        <button type="button" class="btn btn-default" onclick="history.back()" style="margin-left: 10px;">
+                            <span class="glyphicon glyphicon-arrow-left"></span> 返回
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script>
+    function submitForm() {
+        $.ajax({
+            url: '/uav/edit',
+            type: 'PUT',
+            data: $('#uavForm').serialize(),
+            success: function(res) {
+                if (res.code === 0) {
+                    alert('保存成功');
+                    location.href = '/uav/list';
+                } else {
+                    alert(res.msg);
+                }
+            },
+            error: function(xhr) {
+                alert('保存失败: ' + (xhr.responseJSON ? xhr.responseJSON.msg : '网络错误'));
+            }
+        });
+    }
+</script>
+</body>
+</html>

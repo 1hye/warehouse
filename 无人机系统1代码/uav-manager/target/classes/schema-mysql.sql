@@ -1,0 +1,22 @@
+CREATE TABLE IF NOT EXISTS t_uav (
+    id               BIGINT       NOT NULL AUTO_INCREMENT COMMENT '主键',
+    name             VARCHAR(100) NOT NULL                COMMENT '无人机名称',
+    type             VARCHAR(50)                          COMMENT '无人机类型',
+    serial_number    VARCHAR(100)                         COMMENT '序列号',
+    max_flight_time  INT                                  COMMENT '最大飞行时间(分钟)',
+    max_range        DOUBLE                               COMMENT '最大飞行距离(公里)',
+    max_altitude     DOUBLE                               COMMENT '最大飞行高度(米)',
+    payload_capacity DOUBLE                               COMMENT '有效载荷(千克)',
+    battery_capacity INT                                  COMMENT '电池容量(mAh)',
+    weight           DOUBLE                               COMMENT '重量(克)',
+    status           VARCHAR(20)  DEFAULT 'active'        COMMENT '状态',
+    description      TEXT                                 COMMENT 'AI 描述',
+    create_by        VARCHAR(64)                          COMMENT '创建者',
+    create_time      DATETIME     NOT NULL                COMMENT '创建时间',
+    update_by        VARCHAR(64)                          COMMENT '更新者',
+    update_time      DATETIME     NOT NULL                COMMENT '更新时间',
+    deleted          TINYINT      DEFAULT 0               COMMENT '逻辑删除',
+    PRIMARY KEY (id),
+    INDEX idx_name (name),
+    INDEX idx_status (status)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='无人机信息表';

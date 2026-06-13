@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>新增无人机</title>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container-fluid" style="margin-top: 20px;">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">新增无人机</h3>
+        </div>
+        <div class="panel-body">
+            <form id="uavForm" class="form-horizontal" style="max-width: 700px;">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">名称：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="name" name="name"
+                               placeholder="请输入无人机名称" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">类型：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="type" name="type"
+                               placeholder="例如：多旋翼、固定翼、直升机" value="多旋翼">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">序列号：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="serialNumber" name="serialNumber"
+                               placeholder="请输入序列号">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">状态：</label>
+                    <div class="col-sm-9">
+                        <select class="form-control" id="status" name="status">
+                            <option value="active">正常</option>
+                            <option value="maintenance">维护中</option>
+                            <option value="retired">已退役</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">AI 生成属性：</label>
+                    <div class="col-sm-9">
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="aiGenerate" name="aiGenerate" value="true"
+                                   onchange="toggleAiGenerate()">
+                            由 AI 自动生成飞行时间、距离、高度等参数
+                        </label>
+                    </div>
+                </div>
+
+                <!-- AI 生成的属性区域 -->
+                <div id="aiFields" style="display: none;">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">飞行时间(分钟)：</label>
+                        <div class="col-sm-9">
+                            <input type="number" class="form-control" id="maxFlightTime" name="maxFlightTime" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">飞行距离(公里)：</label>
+                        <div class="col-sm-9">
+                            <input type="number" step="0.1" class="form-control" id="maxRange" name="maxRange" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">飞行高度(米)：</label>
+                        <div class="col-sm-9">
+                            <input type="number" step="0.1" class="form-control" id="maxAltitude" name="maxAltitude" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">有效载荷(千克)：</label>
+                        <div class="col-sm-9">
+                            <input type="number" step="0.1" class="form-control" id="payloadCapacity" name="payloadCapacity" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">电池容量(mAh)：</label>
+                        <div class="col-sm-9">
+                            <input type="number" class="form-control" id="batteryCapacity" name="batteryCapacity" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">重量(克)：</label>
+                        <div class="col-sm-9">
+                            <input type="number" step="0.1" class="form-control" id="weight" name="weight" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">描述：</label>
+                        <div class="col-sm-9">
+                            <textarea class="form-control" id="description" name="description" rows="3" readonly></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-9">
+                        <button type="button" class="btn btn-primary" onclick="submitForm()">
+                            <span class="glyphicon glyphicon-save"></span> 保存
+                        </button>
+                        <button type="button" class="btn btn-default" onclick="history.back()" style="margin-left: 10px;">
+                            <span class="glyphicon glyphicon-arrow-left"></span> 返回
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script>
+    function toggleAiGenerate() {
+        var checked = $('#aiGenerate').is(':checked');
+        if (checked) {
+            generateAiAttributes();
+        } else {
+            $('#aiFields').hide();
+        }
+    }
+
+    function generateAiAttributes() {
+        var name = $('#name').val();
+        var type = $('#type').val();
+
+        if (!name) {
+            alert('请先输入无人机名称');
+            $('#aiGenerate').prop('checked', false);
+            return;
+        }
+
+        $('#aiFields').show();
+        $('#maxFlightTime').val('计算中...');
+
+        $.ajax({
+            url: '/uav/aiGenerate',
+            data: { name: name, type: type },
+            success: function(res) {
+                if (res.code === 0 && res.data) {
+                    var data = res.data;
+                    $('#maxFlightTime').val(data.maxFlightTime || '');
+                    $('#maxRange').val(data.maxRange || '');
+                    $('#maxAltitude').val(data.maxAltitude || '');
+                    $('#payloadCapacity').val(data.payloadCapacity || '');
+                    $('#batteryCapacity').val(data.batteryCapacity || '');
+                    $('#weight').val(data.weight || '');
+                    $('#description').val(data.description || '');
+                }
+            },
+            error: function() {
+                alert('AI 属性生成失败');
+                $('#aiGenerate').prop('checked', false);
+                $('#aiFields').hide();
+            }
+        });
+    }
+
+    function submitForm() {
+        var isAi = $('#aiGenerate').is(':checked');
+        var url = isAi ? '/uav/addWithAi' : '/uav/add';
+
+        $.ajax({
+            url: url,
+            type: 'POST',
+            data: $('#uavForm').serialize(),
+            success: function(res) {
+                if (res.code === 0) {
+                    alert('保存成功');
+                    location.href = '/uav/list';
+                } else {
+                    alert(res.msg);
+                }
+            },
+            error: function(xhr) {
+                alert('保存失败: ' + (xhr.responseJSON ? xhr.responseJSON.msg : '网络错误'));
+            }
+        });
+    }
+</script>
+</body>
+</html>

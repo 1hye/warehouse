@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>无人机信息管理</title>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/bootstrap-table/1.18.3/bootstrap-table.min.css">
+</head>
+<body>
+<div class="container-fluid" style="margin-top: 20px;">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">无人机信息管理</h3>
+        </div>
+        <div class="panel-body">
+            <!-- 查询条件 -->
+            <form id="searchForm" class="form-inline" style="margin-bottom: 15px;">
+                <div class="form-group">
+                    <label for="name">名称：</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="无人机名称">
+                </div>
+                <div class="form-group" style="margin-left: 10px;">
+                    <label for="status">状态：</label>
+                    <select class="form-control" id="status" name="status">
+                        <option value="">全部</option>
+                        <option value="active">正常</option>
+                        <option value="maintenance">维护中</option>
+                        <option value="retired">已退役</option>
+                    </select>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="search()">
+                    <span class="glyphicon glyphicon-search"></span> 查询
+                </button>
+                <button type="button" class="btn btn-success" onclick="location.href='/uav/add'">
+                    <span class="glyphicon glyphicon-plus"></span> 新增
+                </button>
+            </form>
+
+            <!-- 数据表格 -->
+            <table id="uavTable"
+                   data-url="/uav/list/page"
+                   data-method="get"
+                   data-pagination="true"
+                   data-page-size="10"
+                   data-page-list="[10, 20, 50]"
+                   data-side-pagination="server"
+                   data-query-params="queryParams"
+                   data-response-handler="responseHandler">
+                <thead>
+                <tr>
+                    <th data-field="id">ID</th>
+                    <th data-field="name">名称</th>
+                    <th data-field="type">类型</th>
+                    <th data-field="maxFlightTime">飞行时间(分钟)</th>
+                    <th data-field="maxRange">飞行距离(公里)</th>
+                    <th data-field="status" data-formatter="statusFormatter">状态</th>
+                    <th data-field="createTime">创建时间</th>
+                    <th data-field="id" data-formatter="actionFormatter">操作</th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/bootstrap-table/1.18.3/bootstrap-table.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/bootstrap-table/1.18.3/locale/bootstrap-table-zh-CN.min.js"></script>
+
+<script>
+    var $table = $('#uavTable');
+
+    $(function() {
+        $table.bootstrapTable();
+    });
+
+    function queryParams(params) {
+        return $.extend({}, params, {
+            name: $('#name').val(),
+            status: $('#status').val()
+        });
+    }
+
+    function responseHandler(res) {
+        if (res.code === 0 && res.data) {
+            return {
+                total: res.data.total,
+                rows: res.data.list
+            };
+        }
+        return { total: 0, rows: [] };
+    }
+
+    function search() {
+        $table.bootstrapTable('refresh');
+    }
+
+    function statusFormatter(value) {
+        if (value === 'active') return '<span class="label label-success">正常</span>';
+        if (value === 'maintenance') return '<span class="label label-warning">维护中</span>';
+        if (value === 'retired') return '<span class="label label-default">已退役</span>';
+        return value;
+    }
+
+    function actionFormatter(value) {
+        var viewUrl = '/uav/' + value;
+        var editUrl = '/uav/edit/' + value;
+        return '<a href="' + viewUrl + '" class="btn btn-info btn-xs" title="查看">' +
+                '<span class="glyphicon glyphicon-eye-open"></span></a> ' +
+                '<a href="' + editUrl + '" class="btn btn-primary btn-xs" title="编辑">' +
+                '<span class="glyphicon glyphicon-edit"></span></a> ' +
+                '<button class="btn btn-danger btn-xs" onclick="remove(' + value + ')" title="删除">' +
+                '<span class="glyphicon glyphicon-trash"></span></button>';
+    }
+
+    function remove(id) {
+        if (confirm('确认删除该无人机信息？')) {
+            $.ajax({
+                url: '/uav/remove/' + id,
+                type: 'DELETE',
+                success: function(res) {
+                    if (res.code === 0) {
+                        alert('删除成功');
+                        $table.bootstrapTable('refresh');
+                    } else {
+                        alert(res.msg);
+                    }
+                }
+            });
+        }
+    }
+</script>
+</body>
+</html>

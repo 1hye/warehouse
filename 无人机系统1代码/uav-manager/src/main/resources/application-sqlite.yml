@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: org.sqlite.JDBC
+    url: jdbc:sqlite:uav.db
+    username:
+    password:
+    initialization-mode: always
+    schema: classpath:schema-sqlite.sql
+
+    druid:
+      initial-size: 1
+      min-idle: 1
+      max-active: 10
+      max-wait: 30000
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+      validation-query: SELECT 1
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      stat-view-servlet:
+        enabled: true
+        url-pattern: /druid/*
+        login-username: admin
+        login-password: 123456
+      filter:
+        stat:
+          log-slow-sql: true
+          slow-sql-millis: 2000
